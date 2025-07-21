@@ -1,6 +1,7 @@
-python clear_data.py
+RUN THE FOLLOWING COMMANDS IN THE TERMINAL.
 
+IN THE BACKEND DIRECTORY (receipt-analyzer-python-fullstack\backend..):
 python -m uvicorn app.main:app --reload
 
-
+IN THE FRONTEND DIRECTORY (receipt-analyzer-python-fullstack\frontend..):
 python -m streamlit run app.py

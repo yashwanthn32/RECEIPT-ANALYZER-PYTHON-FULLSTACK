@@ -1,0 +1,6 @@
+python clear_data.py
+
+python -m uvicorn app.main:app --reload
+
+
+python -m streamlit run app.py

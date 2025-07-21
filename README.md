@@ -59,7 +59,7 @@ The application consists of two parts that need to be run in separate terminals.
     * Open a terminal and navigate to the `backend` directory.
     * Run the following command. This will start the server, and the `lifespan` event will automatically clear any old data, ensuring you get a fresh start every time.
     ```bash
-    python -m app.main
+    python -m uvicorn app.main:app --reload
     ```
     * Keep this terminal open. The API will be running at `http://127.0.0.1:8000`.
 
@@ -90,3 +90,42 @@ You can now upload receipts and see the results instantly. After uploading a fil
 * **Parser Rules:** The parser is rule-based and relies on specific keywords (e.g., "GRAND TOTAL", "ELECTRONICS SUBTOTAL"). It may not work correctly on receipts with very different layouts.
 * **Single Currency:** The application assumes all amounts are in a single currency and does not perform currency conversion.
 * **English Language:** The parsing keywords are in English, and it has not been tested on receipts in other languages.
+
+---
+
+## Results & Outcomes
+
+This section presents the outcomes of processing and analyzing the uploaded receipts. The visualizations and tables below illustrate spending trends over time, distribution of spending by vendor and category, and a detailed list of all processed receipts, providing a comprehensive overview of financial activities.
+
+1. **Receipt and Bill Processor - Upload Interface**
+   
+* This image displays the initial interface of the Receipt and Bill Processor application, showing the "Upload a Receipt" section where users can drag and drop files or browse to upload receipts in various formats (pdf, png, jpg, jpeg, txt). It also indicates the file size limit per upload.
+
+<img width="1918" height="949" alt="Screenshot 2025-07-21 202000" src="https://github.com/user-attachments/assets/904cfa34-5d56-4d1f-944a-6e29d752e318" />
+
+
+2. **All Uploaded Receipts Table**
+   
+* This screenshot presents a tabular view of all uploaded receipts, detailing information such as vendor, date of transaction, amount spent, primary category, and sub-categories. This table allows for easy viewing and analysis of individual receipt data.
+
+<img width="1919" height="667" alt="Screenshot 2025-07-21 202146" src="https://github.com/user-attachments/assets/f15d99af-08cf-4aa3-86c4-c0505b5df320" />
+
+
+
+3. **Spending Analysis by Vendor and Category**
+   
+* This figure comprises two charts: a bar chart on the left titled "Total Spend per Vendor," showing the distribution of spending across different vendors (Reliance Digital and MegaMart), and a pie chart on the right titled "Total Spend by Category," illustrating the percentage breakdown of spending across various categories like Electronics, Apparel, and Groceries.
+
+<img width="1919" height="759" alt="Screenshot 2025-07-21 202227" src="https://github.com/user-attachments/assets/53f6f3f0-3225-4667-822d-c5999e8c79c7" />
+
+
+
+4. **Monthly Spending Trend Over Time**
+   
+* This line graph, titled "Monthly Spending Trend" and "Total Spend Over Time," visualizes the aggregated spending across several months, from September 2024 to July 2025. It highlights fluctuations in monthly expenditure, with a notable peak in January 2025.
+
+<img width="1914" height="765" alt="Screenshot 2025-07-21 202248" src="https://github.com/user-attachments/assets/192f2c8f-3bb3-48ec-ad43-6d580c5cd003" />
+
+
+
+---
